@@ -1,5 +1,10 @@
 My notes on learning Elixir from https://elixir-lang.org/getting-started/
 
+You need access to Elixir REPL for trying out the example. Install at https://elixir-lang.org/install.html
+
+### Getting into the Elixir REPL
+
+You can use the `iex` command to enter into the REPL after installing it.
 
 ### Getting help
 
@@ -38,7 +43,7 @@ Example
 
 Atoms are equal if the names are equal
 
-```iex
+```exs
 iex> :apple == :orange`
 true
 ```
@@ -177,8 +182,10 @@ don't constant time.
 
 Tuples are stored continously in memory.
 
-iiex> x = {1, "2", :hello, true, [1, 2]}
+```
+iex> x = {1, "2", :hello, true, [1, 2]}
 {1, "2", :hello, true, [1, 2]}
+```
 
 So unlike lists you can access them using index.
 
