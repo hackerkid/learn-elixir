@@ -10,13 +10,13 @@ You can use the `iex` command to enter into the REPL after installing it.
 
 Use the `h`
 
-```iex
+```exs
 iex> h Kernel.trunc
 ```
 
 If the function has multiple signatures, specify the number of signatures to select the function.
 
-```iex
+```exs
 iex> h Kernel.trunc/1
 ```
 
@@ -50,7 +50,7 @@ true
 
 `true` and `false` are also atoms. You can skip `:` for them.
 
-```iex
+```exs
 > :true == true
 true
 ```
@@ -61,7 +61,7 @@ Encoded using double quotes.
 
 Supports string interpolation.
 
-```iex
+```exs
 iex> string = "hello"
 "hello"
 iex> "#{string} world"
@@ -69,7 +69,7 @@ iex> "#{string} world"
 ```
 
 You can print using
-```iex
+```exs
 iex> IO.puts("hello")
 hello
 :ok
@@ -79,7 +79,7 @@ Strings are represented as bytes. `ö` takes 2 bytes to be represnted in UTF-8.
 
 You can concatenate strings using `<>`
 
-```iex
+```exs
 iex(47)> x = "hello"
 "hello"
 iex(48)> y = "world"
@@ -88,7 +88,7 @@ iex(49)> x <> " " <> y
 "hello world"
 ```
 
-```iex
+```exs
 iex> is_binary("hellö")
 true
 iex> byte_size("hellö")
@@ -102,7 +102,7 @@ iex> String.upcase("hello")
 ### Anonymous functions
 
 
-```iex
+```exs
 iex> add = fn a, b -> a + b end
 #Function<43.40011524/2 in :erl_eval.expr/5>
 iex> add(1, 3)
@@ -118,7 +118,7 @@ The `.` is required to distinguish between normal functions.
 
 You can access the variables that are in scope when the function is defined.
 
-```iex
+```exs
 iex> x = 7
 7
 iex> print_x = fn -> IO.puts(x) end
@@ -130,7 +130,7 @@ iex> print_x.()
 
 Variabled declared inside the function does not affect the surrounding environment
 
-```iex
+```exs
 #Function<45.40011524/0 in :erl_eval.expr/5>
 iex> y = 2                  
 2
@@ -149,13 +149,13 @@ iex> y
 
 Lists are implemented as Linked Lists.
 
-```iex
+```exs
 iex> list = [1, 2, "three", :four, true, false]  
 [1, 2, "three", :four, true, false]
 ```
 
 You can concatenate or subtract lists. Returns a new list. The Elixr data structures are immutable.
-```iex
+```exs
 iex(17)> list = [1, 2, "three", :four, true, false]  
 [1, 2, "three", :four, true, false]
 iex(18)> [1, 2] ++ [3, 4]
@@ -189,7 +189,7 @@ iex> x = {1, "2", :hello, true, [1, 2]}
 
 So unlike lists you can access them using index.
 
-```iex
+```exs
 iex> elem(x, 2)                        
 :hello
 ```
@@ -197,7 +197,7 @@ iex> elem(x, 2)
 You can also change the element of a tuple and returns a new tuple. The new tuple share the
 elements with the old tuple except the one that has been replaced.
 
-```iex
+```exs
 iex(38)> x
 {1, "2", :hello, true, [1, 2]}
 iex(39)> put_elem(x, 3, :world)
@@ -232,7 +232,7 @@ true
 
 Unlike Python the left hand operator has to be a boolean.
 
-```iex
+```exs
 iex(62)> true and 1      
 1
 iex(63)> 1 or true
@@ -250,7 +250,7 @@ iex(64)> true and 3
 But there are the traditional `||`, `&&` and `!` operators which can be
 evaulated using any data typles. 0 is not considered to be false.
 
-```iex
+```exs
 iex(86)> nil && 1 
 nil
 iex(87)> nil && 2
