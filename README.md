@@ -208,7 +208,7 @@ iex(40)> x
 
 You can use the `tuple_size` function to get the size of the tuple.
 
-``
+```exs
 iex(42)> x            
 {1, "2", :hello, true, [1, 2]}
 iex(43)> tuple_size(x)
@@ -219,7 +219,7 @@ iex(43)> tuple_size(x)
 ### Boolean operators
 
 Similiar to Python, there is `and` and `or` for evaluating boolean values.
-``iex
+```exs
 iex(55)> true and false        
 false
 iex(56)> false and true
